@@ -9,13 +9,16 @@ export const metadata: Metadata = {
 	description: 'Info Paseos description'
 }
 
-export default function RootLayout({
+const RootLayout = ({
 	children
 }: Readonly<{
 	children: React.ReactNode
-}>) {
+}>) => {
 	return (
-		<html lang='en' className='bg-[#254E79] text-white scroll-smooth'>
+		<html
+			lang='en'
+			className='bg-[#254E79] text-white scroll-smooth font-medium'
+		>
 			<body
 				className={`${montserrat.className} h-dvh px-[5%] overflow-x-hidden`}
 			>
@@ -24,3 +27,5 @@ export default function RootLayout({
 		</html>
 	)
 }
+
+export default RootLayout

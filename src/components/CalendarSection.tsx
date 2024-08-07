@@ -213,7 +213,7 @@ export default function CalendarSection() {
 							<h3 className='pb-4 text-4xl'>
 								{monthNamesInSpanish[month as Month]}
 							</h3>
-							<div className='grid grid-cols-2 gap-8 2xl:grid-cols-5 lg:grid-cols-3 xl:grid-cols-4'>
+							<div className='grid grid-cols-1 gap-8 2xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4'>
 								{filteredTours
 									.sort(
 										(a, b) =>

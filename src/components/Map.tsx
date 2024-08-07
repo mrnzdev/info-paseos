@@ -103,7 +103,7 @@ const Map: React.FC<MapProps> = ({ tours }) => {
 											width={150}
 											height={150}
 										/>
-										<div className='flex flex-col gap-2'>
+										<div className='w-full flex flex-col gap-2'>
 											<h3 className='text-lg font-bold'>
 												{title}
 											</h3>

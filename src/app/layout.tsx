@@ -1,18 +1,19 @@
-import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import './globals.css';
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Info Paseos',
 	description: 'Info Paseos description'
-}
+};
 
 const RootLayout = ({
 	children
 }: Readonly<{
-	children: React.ReactNode
+	children: React.ReactNode;
 }>) => {
 	return (
 		<html
@@ -23,9 +24,10 @@ const RootLayout = ({
 				className={`${montserrat.className} h-dvh px-[5%] overflow-x-hidden`}
 			>
 				{children}
+				<Analytics />
 			</body>
 		</html>
-	)
-}
+	);
+};
 
-export default RootLayout
+export default RootLayout;

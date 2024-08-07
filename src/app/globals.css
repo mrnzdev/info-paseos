@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.leaflet-container {
+	font-family: 'Montserrat', sans-serif !important;
+}
+
+.leaflet-popup-content {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 35vh !important;
+	height: 15vh !important;
+}
+
+.leaflet-popup-content p {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+select {
+	font-family: 'Montserrat', sans-serif;
+}

@@ -185,7 +185,7 @@ export default function CalendarSection() {
 
 	return (
 		<section className='min-h-dvh flex flex-col gap-12 py-12'>
-			<h2 className='text-5xl text-center'>
+			<h2 className='text-4xl lg:text-5xl text-center'>
 				<span className='italic font-bold'>Calendario </span>
 				de paseos
 			</h2>

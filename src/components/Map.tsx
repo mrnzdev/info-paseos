@@ -43,8 +43,8 @@ const Map: React.FC<MapProps> = ({ tours }) => {
 		<MapContainer
 			center={[-33.0128, -55.7658]}
 			className={'h-[100%] rounded-3xl'}
-			zoom={7}
-			minZoom={7.5}
+			zoom={8}
+			minZoom={6}
 			touchZoom={false}
 			scrollWheelZoom={false}
 		>

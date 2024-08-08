@@ -52,7 +52,7 @@ export default function ExperiencesSection() {
 
 	return (
 		<section className='h-dvh flex flex-col gap-12 py-12'>
-			<h2 className='text-4xl lg:text-5xl text-center'>
+			<h2 className='text-3xl lg:text-5xl text-center'>
 				Nuevas <span className='italic font-bold'>experiencias</span>
 			</h2>
 			{tours && <Map tours={tours} />}

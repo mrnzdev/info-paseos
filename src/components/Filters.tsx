@@ -58,7 +58,7 @@ const Filters: React.FC<FiltersProps> = ({
 	];
 
 	return (
-		<div className='flex gap-8'>
+		<div className='flex flex-col lg:flex-row flex-wrap gap-8'>
 			<Select
 				options={companyOptions}
 				onChange={(value) => setSelectedCompany(value)}

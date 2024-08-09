@@ -20,15 +20,25 @@ export default function Card({
 	startDate,
 	endDate
 }: CardProps) {
+	const capitalizeFirstLetter = (string: string) => {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	};
+
 	const formatDateRange = (startDate: Date, endDate: Date) => {
-		const start = new Date(startDate).toLocaleDateString('es-ES', {
-			month: 'short',
-			day: 'numeric'
-		});
-		const end = new Date(endDate).toLocaleDateString('es-ES', {
-			month: 'short',
-			day: 'numeric'
-		});
+		const start = capitalizeFirstLetter(
+			new Date(startDate).toLocaleDateString('es-ES', {
+				weekday: 'short',
+				month: 'short',
+				day: 'numeric'
+			})
+		);
+		const end = capitalizeFirstLetter(
+			new Date(endDate).toLocaleDateString('es-ES', {
+				weekday: 'short',
+				month: 'short',
+				day: 'numeric'
+			})
+		);
 		return start === end ? start : `${start} - ${end}`;
 	};
 
@@ -49,22 +59,28 @@ export default function Card({
 			<h3 className='text-xl font-bold'>{title}</h3>
 			<p>{companyName}</p>
 			<p>
-				{new Date(startDate).toLocaleDateString('es-ES', {
-					month: 'long',
-					day: 'numeric'
-				})}
+				{capitalizeFirstLetter(
+					new Date(startDate).toLocaleDateString('es-ES', {
+						weekday: 'short',
+						month: 'long',
+						day: 'numeric'
+					})
+				)}
 				{new Date(startDate).toLocaleDateString('en-US') !==
 					new Date(endDate).toLocaleDateString('en-US') && (
 					<>
 						{' - '}
-						{new Date(endDate).toLocaleDateString('es-ES', {
-							month: 'long',
-							day: 'numeric'
-						})}
+						{capitalizeFirstLetter(
+							new Date(endDate).toLocaleDateString('es-ES', {
+								weekday: 'short',
+								month: 'long',
+								day: 'numeric'
+							})
+						)}
 					</>
 				)}
 			</p>
-			<div className='min-h-4 h-full relative'>
+			<div className='min-h-8 h-full relative'>
 				<div className='absolute right-0 bottom-0 flex gap-2'>
 					<SocialIcon
 						type='whatsapp'
